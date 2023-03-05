@@ -11,6 +11,14 @@ let gravity = 0.1;
 let thrust = 0;
 let altitude = 0;
 let velocity = 0;
+const keys = {
+  ArrowDown: {
+    pressed: false
+  }
+  Space: {
+    pressed: false
+  } 
+}
 
 function draw() {
     if (!isRunning) {
@@ -78,6 +86,7 @@ function draw() {
         velocity = 1
         break
     }
+    console.log (e.key)
   });
 
   window.addEventListener('keyup', (e) => {
