@@ -72,3 +72,6 @@ function draw() {
     }
   }
   
+  window.addEventListener('keydown', (e) => {
+    
+  })
