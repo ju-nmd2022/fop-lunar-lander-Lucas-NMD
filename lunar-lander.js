@@ -18,7 +18,7 @@ const keys = {
   Space: {
     pressed: false
   } 
-}
+};
 
 function draw() {
     if (!isRunning) {
@@ -83,16 +83,15 @@ function draw() {
   window.addEventListener('keydown', (e) => {
     switch (e.key) {
       case 'ArrowDown':
-        velocity = 1
-        break
+        velocity = 1;
+        break;
     }
-    console.log (e.key)
   });
 
   window.addEventListener('keyup', (e) => {
     switch (e.key) {
       case 'ArrowDown':
-        velocity = 0
-        break
+        velocity = 0;
+        break;
     }
   });
