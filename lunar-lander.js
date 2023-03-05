@@ -14,7 +14,7 @@ let velocity = 0;
 const keys = {
   ArrowDown: {
     pressed: false
-  }
+  },
   Space: {
     pressed: false
   } 
