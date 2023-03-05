@@ -73,5 +73,17 @@ function draw() {
   }
   
   window.addEventListener('keydown', (e) => {
-    
-  })
+    switch (e.key) {
+      case 'ArrowDown':
+        velocity = 1
+        break
+    }
+  });
+
+  window.addEventListener('keyup', (e) => {
+    switch (e.key) {
+      case 'ArrowDown':
+        velocity = 0
+        break
+    }
+  });
