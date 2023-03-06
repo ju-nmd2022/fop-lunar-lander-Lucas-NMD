@@ -6,7 +6,6 @@ function setup() {
 let isRunning = false;
 let isLanded = false;
 let isGameOver = false;
-let fuel = 100;
 let gravity = 0.1;
 let thrust = 0;
 let altitude = 0;
@@ -36,13 +35,7 @@ function draw() {
       // Game screen
       background(0);
       fill(255);
-      textSize(16);
-      textAlign(LEFT);
-      text('Fuel:', 20, 30);
-      rect(70, 10, 100, 20);
-      fill(255, 0, 0);
-      rect(70, 10, fuel, 20);
-      textSize(16);
+      textSize(16); 
       textAlign(RIGHT);
       text('Altitude: ' + altitude.toFixed(2) + 'm', width - 20, 30);
       text('Velocity: ' + velocity.toFixed(2) + 'm/s', width - 20, 50);
@@ -63,9 +56,6 @@ function draw() {
         } else {
           isGameOver = true;
         }
-      }
-      if (fuel <= 0) {
-        isGameOver = true;
       }
       // Game over logic
       if (isGameOver) {
