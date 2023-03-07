@@ -6,10 +6,11 @@ function setup() {
 let isRunning = false;
 let isLanded = false;
 let isGameOver = false;
-let gravity = 0.1;
+let gravity = 0.2;
 let thrust = 0;
 let altitude = 0;
 let velocity = 0;
+let rocketY = 0;
 const keys = {
   ArrowDown: {
     pressed: false
@@ -43,6 +44,7 @@ function draw() {
       velocity += gravity - thrust;
       altitude += velocity;
       rocket (350, 0);
+      rocketY += velocity;
       // Check for landing or crash
       if (altitude <= 0) {
         if (velocity <= 2) {
