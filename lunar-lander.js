@@ -47,6 +47,10 @@ function draw() {
     textSize(16); 
     textAlign(RIGHT);
     text('Velocity: ' + velocity.toFixed(2) + 'm/s', width - 20, 50);
+    // Draw moon surface
+    fill('#cccccc');
+    ellipseMode(CENTER);
+    ellipse(moonSurface.x, moonSurface.y, moonSurface.r, moonSurface.h);
     // Update spaceship position
     rocket (350, rocketY);
     rocketY += velocity;
@@ -60,10 +64,7 @@ function draw() {
         isGameOver = true;
       }
     }
-    // Draw moon surface
-    fill('#cccccc');
-    ellipseMode(CENTER);
-    ellipse(moonSurface.x, moonSurface.y, moonSurface.r, moonSurface.h);
+   
     // Game over logic
     if (isGameOver) {
       noLoop();
