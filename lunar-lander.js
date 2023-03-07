@@ -6,7 +6,6 @@ let isRunning = false;
 let isLanded = false;
 let isGameOver = false;
 let gravity = 0.1;
-let thrust = 0;
 let velocity = 0;
 let rocketY = 0;
 const keys = {
@@ -40,7 +39,7 @@ function draw() {
       // Update spaceship position
       rocket (350, rocketY);
       rocketY += velocity;
-      velocity += gravity + thrust;
+      velocity += gravity;
       // Check for landing or crash
       if (rocketY >= height) {
         if (velocity <= 2) {
@@ -82,8 +81,7 @@ function draw() {
   // Keyboard controls
 function keyPressed() {
   if (keyCode === 32 || keyCode === DOWN_ARROW) {
-    if (isRunning) {
-      thrust = -0.5;
+    if (isRunning) { 
       rocketY -= 10;
       velocity -= 3;
     }
@@ -92,7 +90,7 @@ function keyPressed() {
 function keyReleased() {
   if (keyCode === 32 || keyCode === DOWN_ARROW) {
     if (isRunning) {
-      thrust = 0;
+      velocity = 0;
     }
   }
 }
