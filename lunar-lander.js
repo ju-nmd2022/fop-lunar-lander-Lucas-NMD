@@ -22,7 +22,7 @@ const keys = {
 function draw() {
     if (!isRunning) {
       // Start screen
-      background(0);
+      background(bg);
       fill(255);
       textSize(48);
       textAlign(CENTER);
