@@ -84,8 +84,8 @@ function keyPressed() {
   if (keyCode === 32 || keyCode === DOWN_ARROW) {
     if (isRunning) {
       thrust = -0.5;
-      rocketY -= 10;
-      velocity -= 5
+      rocketY -= 20;
+      velocity -= 15
     }
   }
 }
