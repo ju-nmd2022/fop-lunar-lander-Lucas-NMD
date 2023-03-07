@@ -39,8 +39,6 @@ function draw() {
       textAlign(RIGHT);
       text('Altitude: ' + altitude.toFixed(2) + 'm', width - 20, 30);
       text('Velocity: ' + velocity.toFixed(2) + 'm/s', width - 20, 50);
-      fill(200);
-      rect(300, 100, 40, 80);
       // Update spaceship position
       velocity += gravity - thrust;
       altitude += velocity;
