@@ -55,6 +55,10 @@ function draw() {
           isGameOver = true;
         }
       }
+      // Draw moon surface
+      fill('#cccccc');
+      ellipseMode(CENTER);
+      ellipse(width/2, height, width, 200);
       // Game over logic
       if (isGameOver) {
         noLoop();
