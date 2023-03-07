@@ -43,8 +43,8 @@ function draw() {
       velocity += gravity - thrust;
       altitude += velocity;
       translate(320, height - 50 - altitude);
-      fill('red')
-      rect(350, 0, 20, 30)
+      fill('red');
+      rect(350, 0, 20, 30);
       // Check for landing or crash
       if (altitude <= 0) {
         if (velocity <= 2) {
