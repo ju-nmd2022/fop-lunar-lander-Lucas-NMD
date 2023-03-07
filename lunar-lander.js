@@ -1,6 +1,6 @@
 function setup() {
   bg = loadImage('/stars.jpg');
-  createCanvas(1920, 1248);
+  createCanvas(800, 600);
 }
 let isRunning = false;
 let isLanded = false;
