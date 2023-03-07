@@ -5,7 +5,7 @@ function setup() {
 let isRunning = false;
 let isLanded = false;
 let isGameOver = false;
-let gravity = 0.2;
+let gravity = 0.1;
 let thrust = 0;
 let velocity = 0;
 let rocketY = -100;
@@ -38,9 +38,9 @@ function draw() {
       textAlign(RIGHT);
       text('Velocity: ' + velocity.toFixed(2) + 'm/s', width - 20, 50);
       // Update spaceship position
-      velocity += gravity + thrust;
       rocket (350, rocketY);
       rocketY += velocity;
+      velocity += gravity;
       // Check for landing or crash
       if (rocketY >= height) {
         if (velocity <= 2) {
