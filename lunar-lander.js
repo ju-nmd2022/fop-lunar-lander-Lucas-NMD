@@ -1,13 +1,7 @@
-const canvas = document.querySelector('canvas')
-const c = canvas.getContext('2d')
-
-canvas.width = 800
-canvas.height = 600
-
-c.fillRect(0, 0, canvas.width, canvas.height)
-
-const bkgnd = new Image()
-bkgnd.src = "AdobeStock_322730915.svg";
+function setup() {
+    createCanvas(800, 600);
+    background(255);
+}
 
 let isRunning = false;
 let isLanded = false;
@@ -123,6 +117,4 @@ function rocket(x, y) {
   fill('red');
   rect(x, y, 20, 30);
 }
-function drawImg (src, x, y, w, h) {
-  c.drawImg (src, x, y, w, h);
-}
+function drawImg (src, x, y, w, h)
