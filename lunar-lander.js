@@ -42,8 +42,7 @@ function draw() {
       // Update spaceship position
       velocity += gravity - thrust;
       altitude += velocity;
-      fill('red');
-      rect(350, 0, 20, 30);
+      rocket (350, 0);
       // Check for landing or crash
       if (altitude <= 0) {
         if (velocity <= 2) {
@@ -110,4 +109,9 @@ function mouseClicked() {
     velocity = 0;
     loop();
   }
+}
+
+function rocket(x, y) {
+  fill('red');
+  rect(x, y, 20, 30);
 }
