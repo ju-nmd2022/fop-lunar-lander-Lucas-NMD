@@ -38,7 +38,7 @@ function draw() {
       textAlign(RIGHT);
       text('Velocity: ' + velocity.toFixed(2) + 'm/s', width - 20, 50);
       // Update spaceship position
-      velocity += gravity - thrust;
+      velocity += gravity + thrust;
       rocket (350, rocketY);
       rocketY += velocity;
       // Check for landing or crash
@@ -85,6 +85,7 @@ function keyPressed() {
     if (isRunning) {
       thrust = -0.5;
       rocketY -= 10;
+      velocity -= 5
     }
   }
 }
