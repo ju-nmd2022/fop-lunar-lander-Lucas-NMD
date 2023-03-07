@@ -84,6 +84,7 @@ function keyPressed() {
   if (keyCode === 32 || keyCode === DOWN_ARROW) {
     if (isRunning) {
       thrust = 0.3;
+      velocity += gravity;
     }
   }
 }
