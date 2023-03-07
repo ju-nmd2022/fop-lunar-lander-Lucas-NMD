@@ -8,7 +8,7 @@ let isGameOver = false;
 let gravity = 0.2;
 let thrust = 0;
 let velocity = 0;
-let rocketY = 0;
+let rocketY = -100;
 const keys = {
   ArrowDown: {
     pressed: false
