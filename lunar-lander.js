@@ -103,7 +103,6 @@ function mouseClicked() {
     isLanded = false;
     isGameOver = false;
     thrust = 0;
-    altitude = 0;
     velocity = 0;
     loop();
   }
