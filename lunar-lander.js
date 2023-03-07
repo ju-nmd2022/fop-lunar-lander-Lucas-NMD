@@ -120,4 +120,3 @@ function rocket(x, y) {
   fill('red');
   rect(x, y, 20, 30);
 }
-function drawImg (src, x, y, w, h)
