@@ -38,6 +38,10 @@ function draw() {
       galaxySound.play ();
       galaxySound.volume = 0.5;
       galaxySound.loop = true;
+      // Draw moon surface
+      fill('#cccccc');
+      ellipseMode(CENTER);
+      ellipse(width/2, height, width, 100);
       // Update spaceship position
       rocket (350, rocketY);
       rocketY += velocity;
@@ -50,10 +54,6 @@ function draw() {
           isGameOver = true;
         }
       }
-      // Draw moon surface
-    fill('#cccccc');
-    ellipseMode(CENTER);
-    ellipse(width/2, height, width, 100);
       // Game over logic
       if (isGameOver) {
         noLoop();
