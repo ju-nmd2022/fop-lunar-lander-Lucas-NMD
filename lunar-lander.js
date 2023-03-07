@@ -45,9 +45,8 @@ function draw() {
       velocity += gravity - thrust;
       altitude += velocity;
       translate(320, height - 50 - altitude);
-      fill(255, 255, 0);
-      rect(-20, 0, 40, 20);
-      rect(-10, 20, 20, 30);
+      fill('red')
+      rect(350, 0, 20, 30)
       // Check for landing or crash
       if (altitude <= 0) {
         if (velocity <= 2) {
@@ -114,8 +113,4 @@ function mouseClicked() {
     velocity = 0;
     loop();
   }
-}
-function rocket() {
-  fill('red')
-  rect(350, 0, 20, 30)
 }
