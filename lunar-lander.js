@@ -6,6 +6,9 @@ canvas.height = 600
 
 c.fillRect(0, 0, canvas.width, canvas.height)
 
+const bkgnd = new Image(800, 600)
+bkgnd.src= '';
+
 let isRunning = false;
 let isLanded = false;
 let isGameOver = false;
