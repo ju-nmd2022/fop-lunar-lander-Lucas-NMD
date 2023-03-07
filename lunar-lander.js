@@ -1,6 +1,6 @@
 let img;
 function preload() {
-  img = loadImage('AdobeStock_322730915.svg');
+  img = loadImage('/stars.jpg');
 }
 function setup() {
     createCanvas(800, 600);
