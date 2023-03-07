@@ -1,5 +1,10 @@
 let rocketImg;
-let moonSurface;
+let moonSurface = {
+  x: width / 2,
+  y: height,
+  r: width,
+  h: 100
+};
 function preload() {
   rocketImg = loadImage('rocket.png');
 }
@@ -7,12 +12,6 @@ function preload() {
 function setup() {
   bg = loadImage('stars.jpg');
   createCanvas(800, 600);
-  moonSurface = {
-    x: width / 2,
-    y: height,
-    r: width,
-    h: 100
-  };
 }
 let isRunning = false;
 let isLanded = false;
