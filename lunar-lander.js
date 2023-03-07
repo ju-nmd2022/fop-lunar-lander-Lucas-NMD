@@ -62,7 +62,7 @@ function draw() {
         textSize(48);
         textAlign(CENTER);
         fill(255, 0, 0);
-        text(isLanded ? 'Congratulations! You landed safely.' : 'Oops! You crashed.', width/2, height/2);
+        text(isLanded? 'Congratulations! You landed safely.' : 'Oops! You crashed.', width/2, height/2);
         textSize(32);
         text('Click to play again', width/2, height/2 + 60);
       }
