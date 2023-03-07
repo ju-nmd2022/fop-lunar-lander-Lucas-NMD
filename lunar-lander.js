@@ -45,6 +45,7 @@ function draw() {
       if (rocketY >= height) {
         if (velocity <= 2) {
           isLanded = true;
+          isGameOver = true;
         } else {
           isGameOver = true;
         }
