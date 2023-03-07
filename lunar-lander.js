@@ -42,7 +42,7 @@ function draw() {
       rocket (350, 0);
       rocketY += velocity;
       // Check for landing or crash
-      if (rocketY >= 600) {
+      if (rocketY = 600) {
         if (velocity <= 2) {
           isLanded = true;
         } else {
