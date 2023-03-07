@@ -14,14 +14,7 @@ let isGameOver = false;
 let gravity = 0.1;
 let velocity = 0;
 let rocketY = 0;
-const keys = {
-  ArrowDown: {
-    pressed: false
-  },
-  Space: {
-    pressed: false
-  } 
-};
+let galaxySound = new Audio('voyageur-galactic-02-114568.mp3')
 
 function draw() {
     if (!isRunning) {
@@ -42,6 +35,8 @@ function draw() {
       textSize(16); 
       textAlign(RIGHT);
       text('Velocity: ' + velocity.toFixed(2) + 'm/s', width - 20, 50);
+      galaxySound.play ();
+      galaxySound.volume = 0.5;
       // Update spaceship position
       rocket (350, rocketY);
       rocketY += velocity;
@@ -72,21 +67,6 @@ function draw() {
     }
   }
   
-  /* window.addEventListener('keydown', (e) => {
-    switch (e.key) {
-      case 'ArrowDown':
-        velocity = 1;
-        break;
-    }
-  });
-
-  window.addEventListener('keyup', (e) => {
-    switch (e.key) {
-      case 'ArrowDown':
-        velocity = 0;
-        break;
-    }
-  }); */
 
   // Keyboard controls
 function keyPressed() {
