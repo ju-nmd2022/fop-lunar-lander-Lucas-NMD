@@ -70,7 +70,7 @@ function draw() {
     }
   }
   
-  window.addEventListener('keydown', (e) => {
+  /* window.addEventListener('keydown', (e) => {
     switch (e.key) {
       case 'ArrowDown':
         velocity = 1;
@@ -84,4 +84,35 @@ function draw() {
         velocity = 0;
         break;
     }
-  });
+  }); */
+
+  // Keyboard controls
+function keyPressed() {
+  if (keyCode === 32 || keyCode === DOWN_ARROW) {
+    if (isRunning) {
+      thrust = 0.3;
+    }
+  }
+}
+function keyReleased() {
+  if (keyCode === 32 || keyCode === DOWN_ARROW) {
+    if (isRunning) {
+      thrust = 0;
+    }
+  }
+}
+
+// Start game
+function mouseClicked() {
+  if (!isRunning) {
+    isRunning = true;
+    loop();
+  } else if (isGameOver) {
+    isLanded = false;
+    isGameOver = false;
+    thrust = 0;
+    altitude = 0;
+    velocity = 0;
+    loop();
+  }
+}
