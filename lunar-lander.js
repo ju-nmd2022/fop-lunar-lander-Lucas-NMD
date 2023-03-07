@@ -6,7 +6,7 @@ function setup() {
 let isRunning = false;
 let isLanded = false;
 let isGameOver = false;
-let gravity = -0.1;
+let gravity = 0.1;
 let thrust = 0;
 let altitude = 0;
 let velocity = 0;
