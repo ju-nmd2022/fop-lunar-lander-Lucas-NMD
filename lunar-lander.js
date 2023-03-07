@@ -7,7 +7,6 @@ let isLanded = false;
 let isGameOver = false;
 let gravity = 0.2;
 let thrust = 0;
-let altitude = 0;
 let velocity = 0;
 let rocketY = 0;
 const keys = {
@@ -37,15 +36,13 @@ function draw() {
       fill(255);
       textSize(16); 
       textAlign(RIGHT);
-      text('Altitude: ' + altitude.toFixed(2) + 'm', width - 20, 30);
       text('Velocity: ' + velocity.toFixed(2) + 'm/s', width - 20, 50);
       // Update spaceship position
       velocity += gravity - thrust;
-      altitude += velocity;
       rocket (350, 0);
       rocketY += velocity;
       // Check for landing or crash
-      if (altitude <= 0) {
+      if (rocketY <= 600) {
         if (velocity <= 2) {
           isLanded = true;
         } else {
