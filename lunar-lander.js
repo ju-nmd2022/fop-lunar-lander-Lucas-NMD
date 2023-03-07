@@ -115,3 +115,7 @@ function mouseClicked() {
     loop();
   }
 }
+function rocket() {
+  fill('red')
+  rect(350, 0, 20, 30)
+}
