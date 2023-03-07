@@ -1,5 +1,5 @@
 let rocketImg;
-
+let moonSurface;
 function preload() {
   rocketImg = loadImage('rocket.png');
 }
@@ -7,6 +7,12 @@ function preload() {
 function setup() {
   bg = loadImage('stars.jpg');
   createCanvas(800, 600);
+  moonSurface = {
+    x: width / 2,
+    y: height,
+    r: width,
+    h: 100
+  };
 }
 let isRunning = false;
 let isLanded = false;
@@ -47,8 +53,8 @@ function draw() {
       rocketY += velocity;
       velocity += gravity;
       // Check for landing or crash
-      if (rocketY >= height) {
-        if (velocity <= 2) {
+      if (rrocketY + 30 >= moonSurface) {
+        if (velocity <= 3) {
           isLanded = true;
           isGameOver = true;
         } else {
@@ -58,7 +64,7 @@ function draw() {
       // Draw moon surface
       fill('#cccccc');
       ellipseMode(CENTER);
-      ellipse(width/2, height, width, 200);
+      ellipse(moonSurface.x, moonSurface.y, moonSurface.r, moonSurface.h);
       // Game over logic
       if (isGameOver) {
         noLoop();
