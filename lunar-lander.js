@@ -41,7 +41,6 @@ function draw() {
       text('Velocity: ' + velocity.toFixed(2) + 'm/s', width - 20, 50);
       fill(200);
       rect(300, 100, 40, 80);
-      triangle(280, 180, 340, 180, 310, 220);
       // Update spaceship position
       velocity += gravity - thrust;
       altitude += velocity;
