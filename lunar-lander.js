@@ -1,10 +1,6 @@
-let img;
-function preload() {
-  img = loadImage('/stars.jpg');
-}
 function setup() {
-    createCanvas(800, 600);
-    background(255);
+  bg = loadImage('/stars.jpg');
+  createCanvas(1920, 1248);
 }
 let isRunning = false;
 let isLanded = false;
@@ -37,7 +33,7 @@ function draw() {
       text('Click to start', width/2, height/2 + 80);
     } else {
       // Game screen
-      background(img);
+      background(bg);
       fill(255);
       textSize(16); 
       textAlign(RIGHT);
