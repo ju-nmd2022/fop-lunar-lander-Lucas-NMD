@@ -1,5 +1,5 @@
 function setup() {
-  bg = loadImage('assets/stars.jpg');
+  bg = loadImage('stars.jpg');
   createCanvas(800, 600);
 }
 let isRunning = false;
