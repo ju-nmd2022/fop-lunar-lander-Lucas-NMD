@@ -103,7 +103,6 @@ function mouseClicked() {
   } else if (isGameOver) {
     isLanded = false;
     isGameOver = false;
-    thrust = 0;
     velocity = 0;
     rocketY = 0;
     loop();
