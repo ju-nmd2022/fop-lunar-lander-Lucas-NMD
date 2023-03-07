@@ -40,7 +40,7 @@ function draw() {
       // Update spaceship position
       rocket (350, rocketY);
       rocketY += velocity;
-      velocity += gravity;
+      velocity += gravity + thrust;
       // Check for landing or crash
       if (rocketY >= height) {
         if (velocity <= 2) {
