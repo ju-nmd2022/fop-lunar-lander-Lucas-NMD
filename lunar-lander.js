@@ -2,6 +2,7 @@ let rocketImg;
 
 function preload() {
   rocketImg = loadImage('rocket.png');
+  rocketImg.resize(20, 30);
 }
 
 function setup() {
@@ -116,5 +117,5 @@ function mouseClicked() {
 }
 
 function rocket(x, y) {
-  image(rocketImg, x, y, 50, 80);
+  image(rocketImg, x, y);
 }
