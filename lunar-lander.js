@@ -1,3 +1,9 @@
+let rocketImg;
+
+function preload() {
+  rocketImg = loadImage('rocket.png');
+}
+
 function setup() {
   bg = loadImage('stars.jpg');
   createCanvas(800, 600);
@@ -110,6 +116,5 @@ function mouseClicked() {
 }
 
 function rocket(x, y) {
-  fill('red');
-  rect(x, y, 20, 30);
+  image(rocketImg, x, y, 50, 80);
 }
