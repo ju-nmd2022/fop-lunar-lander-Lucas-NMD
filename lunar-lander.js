@@ -6,7 +6,7 @@ canvas.height = 600
 
 c.fillRect(0, 0, canvas.width, canvas.height)
 
-const bkgnd = new Image(800, 600)
+const bkgnd = new Image()
 bkgnd.src= "AdobeStock_322730915.svg";
 
 let isRunning = false;
