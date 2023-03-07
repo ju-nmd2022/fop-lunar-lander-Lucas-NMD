@@ -2,7 +2,6 @@ let rocketImg;
 
 function preload() {
   rocketImg = loadImage('rocket.png');
-  rocketImg.resize(20, 30);
 }
 
 function setup() {
