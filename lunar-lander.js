@@ -1,8 +1,11 @@
+let img;
+function preload() {
+  img = loadImage('AdobeStock_322730915.svg');
+}
 function setup() {
     createCanvas(800, 600);
     background(255);
 }
-
 let isRunning = false;
 let isLanded = false;
 let isGameOver = false;
@@ -34,7 +37,7 @@ function draw() {
       text('Click to start', width/2, height/2 + 80);
     } else {
       // Game screen
-      background(0);
+      background(img);
       fill(255);
       textSize(16); 
       textAlign(RIGHT);
