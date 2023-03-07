@@ -14,7 +14,7 @@ let isGameOver = false;
 let gravity = 0.1;
 let velocity = 0;
 let rocketY = 0;
-let galaxySound = new Audio('voyageur-galactic-02-114568.mp3')
+const galaxySound = new Audio('voyageur-galactic-02-114568.mp3')
 
 function draw() {
     if (!isRunning) {
@@ -37,6 +37,7 @@ function draw() {
       text('Velocity: ' + velocity.toFixed(2) + 'm/s', width - 20, 50);
       galaxySound.play ();
       galaxySound.volume = 0.5;
+      galaxySound.loop = true;
       // Update spaceship position
       rocket (350, rocketY);
       rocketY += velocity;
@@ -102,3 +103,7 @@ function mouseClicked() {
 function rocket(x, y) {
   image(rocketImg, x, y);
 }
+
+galaxySound.addEventListener('canplaythrough', () => {
+  galaxySound.play();
+});
